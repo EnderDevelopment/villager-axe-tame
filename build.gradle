@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.gradle.userdev' version '7.0.97'
+}
+
+group = project.maven_group
+version = project.mod_version
+
+base {
+    archivesName = project.archives_base_name
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "net.neoforged:neoforge:${project.neoforge_version}"
+}
+
+jar {
+    manifest {
+        attributes([
+            'Specification-Title'    : 'blockling',
+            'Specification-Version'  : project.mod_version,
+            'Implementation-Version' : project.mod_version
+        ])
+    }
+}
+
+tasks.named('compileJava') {
+    options.encoding = 'UTF-8'
+}

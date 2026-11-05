@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+showAsResourcePack=false
+
+[[mods]]
+modId="blockling"
+version="${file.jarVersion}"
+displayName="Blockling"
+description='A villager-like NPC that you can tame by giving it an axe.'
+authors="EnderDevelopment"
+
+[[dependencies.blockling]]
+modId="neoforge"
+type="required"
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.blockling]]
+modId="minecraft"
+type="required"
+versionRange="[1.20.1]"
+ordering="NONE"
+side="BOTH"
